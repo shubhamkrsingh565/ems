@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
-const Login = () => {
+const Login = ({handleLogin}) => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -10,6 +11,8 @@ const Login = () => {
     console.log("Hello");
     console.log(`Your email is ${email} and password is ${password}`)
     
+    handleLogin(email, password);
+
     setEmail("")
     setPassword("")
   };
